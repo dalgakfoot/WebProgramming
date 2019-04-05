@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<input type="button" value="버튼">
+	<br>
+	<input type="submit" value="서브밋">
+	<br>
+	<input type="reset" value="리셋">
+	<br>
+	<input type="text" value="텍스트" size="10">
+	<br>
+	<input type="password" value="12345" maxlength="10">
+	<br>
+	<input type="radio">
+	<br>
+	<input type="checkbox">
+	<br>
+	<hr>
+
+	10대
+	<input type="radio" name="age" checked> 20대
+	<input type="radio" name="age">
+	<!-- name에 적힌 값으로 group화 가능 -->
+	30대
+	<input type="radio" name="age"> 40대
+	<input type="radio" name="age">
+
+	<hr>
+	책 읽기
+	<input type="checkbox" checked> 공부하기
+	<input type="checkbox"> 코딩
+	<input type="checkbox"> 컴퓨터
+	<input type="checkbox">
+	<br>
+	<Hr>
+
+
+	<form action="input.html" method="post">
+		<!-- action의 경로로 정보를 보냄 -->
+		<!-- 실질적 기능은 form 태그로 묶여야 실행 가능 -->
+		이름<input type="text" name="name"><br>
+		<!-- 다른 페이지로 정보를 보낼때, name을 설정해야함 -->
+		주소<input type="text" name="add"><br> <input type="reset"
+			value="초기화"><br> <input type="submit" value="전송">
+		<input type="button" value="버튼"><br>
+		<!-- button타입은 경로를 따로 지정해줘야 한다. -->
+	</form>
+	<hr>
+
+	<form action="input.html" method="get">
+		<!-- 다른 페이지로 정보를 보낼때, name을 설정해야함 -->
+		<input type="text" value="aaaaaaa"><br> 선택01<input
+			type="radio" name="aa" value="1"> 선택02<input type="radio"
+			name="aa" value="2"><br> <select size=1 name="test_5">
+			<option value="p" selected>사과
+			<option value="a">배
+			<option value="b">복숭아
+			<option value="c">딸기
+		</select>
+		<p>
+			<button type="submit">전송</button>
+	</form>
+
+
+	<form action="input.html" method="get">
+		남기고 싶은말 : <br>
+		<textarea name="test_6" rows='3' cols='50'></textarea>
+		<p>
+			<button type="submit">
+				<img src="getterrobo.jpg" width="50" height="50">
+			</button>
+	</form>
+
+
+	<!-- 칸을 이쁘게 만들어줌 -->
+	<fieldset style="width: 500">
+		<legend>취미조사</legend>
+		<!-- 칸 최상단 제목 느낌 -->
+		책읽기<input type='checkbox'> 공부하기<input type='checkbox'>
+		책읽으며 공부하기<input type='checkbox'> 컴퓨터<input type='checkbox'>
+	</fieldset>
+
+	<fieldset style="width: 500">
+		<legend>하고 싶은말</legend>
+		<textarea name="test_6" rows="3" cols="60"></textarea>
+	</fieldset>
+
+
+	<h3>div 공간 분할</h3>
+	<div style="background-color: pink;">div 첫번째 영역</div>
+	<div style="background-color: skyblue;">div 두번째 영역</div>
+	<div style="background-color: aliceblue;">div 세번째 영역</div>
+	<p>
+	
+	<h3>div 안에 span</h3>
+	<div style ="background-color: skyblue;">
+	<span style="background-color: peru;">span 첫번째 영역</span>
+	<span style="background-color: tan;">span 두번째 영역</span>
+    <span style="background-color: gold;">span 세번째 영역</span>
+	</div>
+	
+	
+</body>
+</html>

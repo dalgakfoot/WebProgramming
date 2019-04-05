@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<header>
+	<center> <h2> &lt; 책갈피 기능 &gt;</h2></center>
+</header>
+
+<section>
+	<article>
+		<p>
+		<!-- #문자 : 문자를 id/name으로 가진 곳으로 이동 -->
+		<a href="#user">[이름]</a> &nbsp; <a href="#addr">[주소]</a>&nbsp;
+		<a href="#tel">[전화번호]</a> &nbsp; <a href="#foot">[참고]</a>&nbsp;
+		</p>
+	</article>
+</section>
+
+<p>정보영역</p> ...생략 <p>이름영역</p>
+
+
+<!-- id는 현재페이지 안에서 구분하는 값 / name은 다른 페이지로 넘겨주기도 가능 -->
+
+<p><a name="user" style="color:gold;"><b>홍길동</b></a></p>
+<a href="#top">[TOP]</a>
+
+<p>정보영역</p> ...생략 <p>정보영역</p>
+
+<p><a id="addr" style="color:green;"><b>종로 3가 단성사</b></a></p>
+<a href="#top">[TOP]</a>
+
+<p>정보영역</p> ...생략<p>정보영역</p>
+
+<p id="tel" style="color:red;"><b>010-777-7777</b></p>
+<a href="#top">[TOP]</a>
+<p>정보 영역</p>...생략<p>정보 영역</p>
+
+
+<hr>
+<h3>비디오 자동 재생</h3>
+<video src="video.m4v" controls loop autoplay width="300" height="250"></video>
+<h3>비디오 수동 재생</h3>
+<video src="video.mp4" controls width="300" height="250"></video>
+
+</body>
+</html>
