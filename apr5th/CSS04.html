@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+div.d1{ border : 3px solid red; width: 400px;padding:10px;}
+div.d1:hover{background-color:yellow;} /* 가상클래스 */
+div.d2{ border : 3px double green; width:400px;}
+div.d2:hover{background-color: green;} /* 가상클래스 */
+
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>Pseudo Class</h2> 속성 값: dotted,solid,double<br>
+
+<div class="d1"><h3 style="background:gold">가상 클래스 1 영역</h3></div>
+<!-- 스타일 적용 순서 1. 자기 자신에게 있는 스타일 2. 클래스 3. 외부파일  -->
+
+<div class="d2"><h3>가상 클래스 2 영역</h3> 마우스 위치에 따른 박스의 스타일 변화
+</div>
+
+
+</body>
+</html>

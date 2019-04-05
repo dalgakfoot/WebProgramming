@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+	/* body에서 class="*"인 것들에 적용됨 */
+	/* .클래스명{}  */
+	.class1 {color : blue; background-color: yellow;}
+	.class2 {color : red; background: green;}
+	h3.class1 {color: navy ; background: pink;}
+	/* h3인 것들 중에서 class="class1" 인 것들에 적용됨  */
+	
+	/* body에서 id="*"인것들에 적용됨 */
+	/* #아이디명{}  */
+	#id1 {color : blue; background-color: yellow;}
+	#id2 {color : red; background: green;}
+	h3#id1 {color: navy ; background: pink;}
+	
+	
+	/* 속성 선택자 */
+	/* 많이 쓰이진 않음 */
+	h1[m] {color :red; background-color: gray;}
+	p[text] {color : blue; background-color: yellow;}
+	h1[text="attr3"]{color:green;background-color: pink;}
+		
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1 m>text 속성 이름 선택자</h1>
+	<h1 m>text 속성 이름 선택자</h1>
+	<p text>text 속성 이름 선택자</p>
+	<h1 text="attr3">속성과 속성값 선택자</h1>
+	<h1 text="attr2">속성과 속성값 선택자</h1>
+	<p>속성 선택 없음</p>
+
+
+
+
+	<h1 id="id1">id1 id선택자.</h1>
+	
+	<p id="id1">id1 id선택자 p태그 </p>
+	
+	<h1 id="id2">id2 id선택자.</h1>
+	
+	<p id="id2">id2 id선택자 p태그</p>
+	
+	<h3 id="id1">태그에 의한 id 선택.</h3>
+
+	<h3>h3 기본 태그 입니다. </h3>
+</body>
+</html>
