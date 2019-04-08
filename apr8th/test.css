@@ -1,0 +1,8 @@
+p {
+	color: green;
+	gackground-color:gold;
+
+}
+.class1 {color: red; background-color:yellow;}
+#id1 {color: blue; background-color: pink;}
+h3[m="test"]{color:gold; background-color: gray;}

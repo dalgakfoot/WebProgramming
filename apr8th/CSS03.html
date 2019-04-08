@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+	background-color: yellow;
+	color: red;
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+p.c1 {
+	width: 700px;
+	height: 80px;
+	color: green;
+}
+
+p.c2 {
+	width: 50%;
+	height: 30%;
+	color: purple;
+}
+
+p.c3 {
+	width: 10cm;
+	height: 3cm;
+	color: blue;
+}
+
+.wap {
+	width: 960px;
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- 틀을 미리 만들어 놓고 작성하는 것이 일반적이다. -->
+	
+	<div class="wap">
+		<p>박스 모델의 내용 영역 크기 지정</p>
+		<p class="c1">(1) c1: 박스 모델의 크기를 픽셀 단위로 지정</p>
+		<p class="c2">(2) c2: 박스 모델의 크기를 퍼센트 단위로 지정</p>
+		<p class="c3">(3) c3: 박스 모델의 크기를 센티미터 단위로 지정</p>
+
+		<div style="width: 50%; background-color: red;">
+			<p class="c2">(2) c2 박스 모델의 크기를 퍼센트 단위로 지정</p>
+		</div>
+
+	</div>
+	
+	
+	
+</body>
+</html>

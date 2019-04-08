@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+	div{border:3px solid #73AD21;}
+	
+	.img1{float:right;}
+	.fix{overflow: auto;}
+	.hi {overflow: hidden;}
+	
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p>이미지가 박스 영역을 벗어남</p>
+	<div>
+	
+	<img class="img1" src="test.jpg" width="50" height="50">
+	이미지가 오른쪽 정렬, 박스 영역 벗어남.
+	
+	
+	</div> <br><br><br>
+	
+	<div class="fix">
+	
+	<img class="img1" src="test.jpg" width="50" height="50">
+	이럴 경우 overflow 속성을 auto 또는 hidden 으로 설정하여 해결
+	
+	</div>
+
+
+</body>
+</html>
