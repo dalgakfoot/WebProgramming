@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+/* display:flex -> 요소들을 가로로 정렬하겠다. */
+/* flex-flow:column ->요소들을 세로로 정렬하겠다. */
+
+
+/* float보다 편리하게 사용 가능 */
+
+
+
+#wrap{ display:flex; /* flex-flow:column; */ width: 90%; height:200px; margin :0 auto; border:4px solid black; text-align: center;}
+/* wrap id를 사용하는 값 이후의 자식 div들에 대한 코드  */
+#wrap div{ width: 33.33%}
+#wrap div:first-child{order:1; background:red;} /* order:숫자 -> 정렬 순서를 정해준다. */
+#wrap div:nth-child(2){order:2; background:green;}
+#wrap div:nth-child(3){order:3; background:aqua;}
+
+
+
+
+</style>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="wrap">
+	<div><h1>1</h1></div>
+	<div><h1>2</h1></div>
+	<div><h1>3</h1></div>
+</div>
+
+
+</body>
+</html>

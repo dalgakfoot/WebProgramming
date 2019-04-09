@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body{font-weight: bold; font-size: 12pt; background: gray;}
+
+/* static으로 position을 설정 하면 이후 값은 적용되지 않는다. */
+/* 기본값은 static */
+
+/* .span1{ background : yellow; position: static; top: 5px;} 
+.span2 { background: red; left: 10px;}
+.span3 { background: pink; position: static; top: -5px;} */
+
+/* 기본값에서 적용된 값 만큼 위치 조정 */
+/* .span1{ background : yellow; position: relative; top: 5px;} 
+.span2 { background: red; position: relative; left:10px;}
+.span3 { background: pink; position: relative; top: -5px;}  */
+
+
+/* body를 기준으로 위치 조정. 절대위치
+.span1{ background : yellow; position: absolute; top: 5px;} 
+.span2 { background: red; position: absolute;bottom: 10px;}
+.span3 { background: pink; position: absolute; top: -5px;} */
+
+
+div { background: skyblue;}
+
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div style="background-color:green;">position</div>
+
+<span class="span1">span1</span>
+<span class="span2">span2</span>
+<span class="span3">span3</span>
+<div>기본 값은 static 입니다.</div>
+
+
+</body>
+</html>
