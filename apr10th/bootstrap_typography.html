@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=divice-width,initial-scal=1">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<title>부트스트랩 예제03</title>
+</head>
+<body>
+
+<!-- HTML 표제 <h1~6> / <small> : 모든 제목에 더 가벼운 보조텍스트  -->
+
+<!-- <mark> : 옅은 노란색으로 강조  / <abbr> : 마우스를 올렸을 때, 기타 정보 나옴. -->
+
+<div class="container">
+  <h1>Lighter, Secondary Text</h1>
+  <p>The small element is used to create a lighter, secondary text in any heading:</p>       
+  <h1>h1 heading <mark><small>secondary text</small></mark></h1>
+  <h2>h2 <abbr title="헤딩 ^^;">heading</abbr><small>secondary text</small></h2>
+  <h3>h3 heading <small>secondary text</small></h3>
+  <h4>h4 heading <small>secondary text</small></h4>
+  <h5>h5 heading <small>secondary text</small></h5>
+  <h6>h6 heading <small>secondary text</small></h6>
+  
+  <!-- <blockquote>: 인용 스타일 적용. 마지막 <footer> 써야함 -->
+  <blockquote>
+  <p>오랜옛날 아주옛날 다섯아이가 우주멀리 아주멀리 사라졌다네 이젠 모두 용사되어 우
+  후레쉬맨 후레쉬맨 후레쉬맨 지구방위대 후레쉬맨</p>
+  <footer>후레쉬맨 op</footer>
+  </blockquote>
+  
+  <!-- 우측정렬 -->
+  <blockquote class="blockquote-reverse">
+  <p>오랜옛날 아주옛날 다섯아이가 우주멀리 아주멀리 사라졌다네 이젠 모두 용사되어 우
+  후레쉬맨 후레쉬맨 후레쉬맨 지구방위대 후레쉬맨</p>
+  <footer>후레쉬맨 op</footer>
+  </blockquote>
+  
+  <!-- dl: 사전처럼 용어를 설명하는 목록 / dt : 용어의 제목 / dd : 용어의 설명  -->
+  <dl>
+  	<dt>농구</dt>
+  	<dd>-basketball</dd>
+  	<dt>축구</dt>
+  	<dd>-soccer</dd>
+  </dl>
+  
+  <!-- 분홍 바탕에 빨간글씨  -->
+  <p><code>tprtus</code>는 섹션을 말한다.</p>
+  
+  <!-- 검정바탕에 하얀글씨 -->
+  <kbd>236+p</kbd> 아도겐!
+  
+  <!-- pre : 많은 줄의 글을 쓰고싶다면 사용 공백 다 적용됨 -->
+  <pre><kbd>623+p</kbd>  소                                 류겐!</pre>
+  
+  <!-- 글자색이 바뀜  -->
+  <p class="text-muted">This text is muted. 회색</p> 
+  <p class="text-primary">This text is important. 하늘색</p>
+  <p class="text-success">This text indicates success. 녹색</p>
+  <p class="text-info">This text represents some information. 짙은 하늘색</p>
+  <p class="text-warning">This text represents a warning. 갈색</p>
+  <p class="text-danger">This text represents danger. 빨간색</p>
+  <!-- 블록색이 바뀜  -->
+  <p class="bg-primary">This text is important.</p>
+  <p class="bg-success">This text indicates success.</p>
+  <p class="bg-info">This text represents some information.</p>
+  <p class="bg-warning">This text represents a warning.</p>
+  <p class="bg-danger">This text represents danger.</p>
+  
+  
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</body>
+</html>
