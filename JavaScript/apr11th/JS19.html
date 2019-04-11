@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS 예제 19</title>
+</head>
+<body>
+
+	<script>
+	
+	var x=1;
+	var sum=0;
+	
+	while(x<=100){
+		
+		sum+=x;
+		x++;
+	
+		
+	}
+	document.write("1~100까지의 합 : <b>"+sum+"</b>");	document.write("<br>");
+	
+	var x=0;
+	var sum=0;
+	
+	while(1){
+		x+=3;
+		if(x>100)break;
+		sum+=x;
+		document.write(x+" ");
+	}
+
+	document.write("<p/>");
+	document.write("1~100까지의 수 중 3의 배수 합 : <b>"+sum+"</b>");
+	document.write("<br>");
+	
+	var x=0;
+	var sum=0;
+	for(x=1;x<=100;x++){
+		if(x%3!=0)continue;
+		
+		sum+=x;
+		document.write(x+" ");
+	}
+	
+	document.write("<p/>");
+	document.write("1~100까지의 수 중 3의 배수 합 : <b>"+sum+"</b>");
+	
+	
+	
+	
+	</script>
+
+
+</body>
+</html>

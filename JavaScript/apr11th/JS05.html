@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JS 예제 5</title>
+</head>
+<body>
+
+	<script>
+	
+	var num;
+	var obj = null;
+	
+	document.write("1. 100: "+typeof 100+"<br>"); /* number */
+	document.write("2. 10.5 :"+typeof 10.5+"<br>");
+	document.write("3. \"홍길동\" : "+typeof "홍길동"+"<br>"); /* string  */
+	document.write("4. true : "+typeof true+"<br>"); /* boolean */
+	document.write("5. [1,2,3]"+typeof [1,2,3]+"<br>"); /* object */
+	document.write("6. { }: "+typeof {name:'홍길동', age:25}+"<br>");
+	document.write("7. num : "+typeof num+"<Br>"); /* undefined : 초기화 안했을 시 */
+	document.write("8. obj : "+typeof obj+"<br>"); /* null = object */
+	
+	var num = 10;
+	document.write("num 변수 : "+typeof num+"타입<br>");
+	document.write("----데이터 값 변경 후 ----<br>")
+	var num = "홍길동";
+	document.write("num 변수 : "+typeof num+"타입<br>");
+	</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+
+	var com=[95,88, ,72,68, ,99,82,78,85];
+	
+	var getAvg;
+	
+	function pringAvg(){
+		
+		var i;
+		var sum=0;
+		var count=0;
+		var n=com.length;
+		
+		document.write(n+"명의 점수 입력<p/>");
+		
+		for(i=0;i<n;i++){
+			if(com[i]==undefined){
+				continue;
+			}else{
+				sum+=com[i];
+				count++;
+			}
+			
+		}
+		
+		document.write("점수를 입력한 학생 : "+count+"명 <p/>");
+		document.write("총합 : "+sum+"</p>");
+		return(sum/count);
+		
+	}
+	
+	getAvg=pringAvg();
+	document.write("평균 : <b>"+getAvg+"</b><p/>");
+
+
+</script>
+</body>
+</html>
