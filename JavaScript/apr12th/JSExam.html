@@ -1,0 +1,86 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <meta charset="UTF-8">
+        <title>Insert title here</title>
+
+        <script>
+
+            var srcfront="resources/최근상품0"
+            var i=1
+            var srcrear=".jpg"
+            var stopper=0;
+
+            var src=["resources/최근상품01.jpg","resources/최근상품02.jpg","resources/최근상품03.jpg",
+        "resources/최근상품04.jpg","resources/최근상품05.jpg","resources/최근상품06.jpg","resources/최근상품07.jpg",
+        "resources/최근상품08.jpg"
+        ];
+
+
+
+            
+            function prev(){
+                if(i!=1){
+                    document.getElementById("test").src=srcfront+(--i)+srcrear;
+                }
+            
+            }
+
+            function next(){
+
+                var temp=0;
+                temp = i;
+
+                if(i<=8){
+                    if(++temp>=9){
+                    i=8;
+                    document.getElementById("test").src=srcfront+(i)+srcrear;
+                    }else{
+                        document.getElementById("test").src=srcfront+(++i)+srcrear;
+                    }
+                }
+            }
+
+            function auto(){
+
+                if(i>=8){
+                    i=0;
+                }
+
+                if(i!=9&&stopper==0){
+                document.getElementById("test").src=srcfront+(++i)+srcrear;
+                
+                
+                setTimeout('auto()',1000);
+                }else{
+                    stopper=0;
+                }
+            }
+
+            function stop(){
+                stopper=1;
+            }
+
+            
+        </script>
+
+
+
+
+        </head>
+        <body>
+
+        <div style="width:80%;height:500px;padding-left:40%;padding-right: 40%; ">
+        <img src="resources/최근상품01.jpg" id="test" style="height: 300px;width: 300px">
+        <br>
+        <div style="background: pink;width:300px;">
+        <button id="prev" onclick="prev()">prev</button>
+        <button id="next" onclick="next()">next</button>
+        <button id="auto" onclick="auto()">auto</button>
+        <button id="stop" onclick="stop()">stop</button>
+        </div>
+        </div>
+
+
+        </body>
+        </html>

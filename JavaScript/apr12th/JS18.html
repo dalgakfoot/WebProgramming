@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p>[Hong's Car]</p>
+<p id="carname"></p>
+<p id="carcolor"></p>
+<p id="carspeed"></p>
+
+<p>[Kim's Car]</p>
+<p id="carname2"></p>
+<p id="carcolor2"></p>
+<p id="carspeed2"></p>
+
+
+<script>
+
+    function Car(name,color, speed) {
+
+        this.name= name; this.color= color; this.speed=speed;
+        this.speedup=function(){return this.speed+10;};
+        this.speeddown=function(){return this.speed-10;};
+        
+    }
+
+
+    var HongCar=new Car('sonata','blue',100);
+    var KimCar=new Car('Jeep','red',70);
+
+    var cname = document.getElementById("carname");
+    cname.textContent="car name : "+HongCar.name;
+    var colname = document.getElementById("carcolor");
+    colname.textContent="car color : "+HongCar.color;
+    var cspeed = document.getElementById("carspeed");
+    cspeed.textContent="car speed : "+HongCar.speedup();
+
+    var cname = document.getElementById("carname2");
+    cname.textContent="car name : "+KimCar.name;
+    var colname = document.getElementById("carcolor2");
+    colname.textContent="car color : "+KimCar.color;
+    var cspeed = document.getElementById("carspeed2");
+    cspeed.textContent="car speed : "+KimCar.speedup();
+
+
+</script>
+
+</body>
+</html>

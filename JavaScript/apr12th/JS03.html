@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+    var arrdata=[];
+    function insertArr() {
+        var i = 0;
+        for(i=0;i<=99;i++){
+            arrdata[i]=i+1;
+            document.write(arrdata[i]+" ");
+
+        }
+
+        document.write("<p>arraysize : "+arrdata.length+"</p>");
+    }
+
+    function delDataArr() {
+        var i;
+        for(i=0;i<arrdata.length;i++){arrdata[i]=0;}
+        selectArr();
+        
+    }
+
+    function alldelArr() {
+
+        arrdata.length=0;
+        selectArr();
+
+    }
+
+    function selectArr() {
+
+        var i;
+        for(i=0;i<arrdata.length;i++){
+            document.write(arrdata[i]+" ");
+        }
+        document.write("<p>arraySize : "+arrdata.length+"</p>");
+        document.write("<a href='JS03.html'>return</a>");
+
+    }
+    insertArr();
+
+</script>
+<p/>
+
+<button type="button" onclick="delDataArr()">array data reset</button>
+<button type="button" onclick="alldelArr()">delete array data</button>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="carname"></p>
+<p id="carcolor"></p>
+<p id="carspeed"></p>
+
+<script>
+
+var car = new Object();
+
+car.name = 'soanata'; car.speed = 100; car.color='blue';
+
+car.speedup = function() {return this.speed+10;};
+
+var cname = document.getElementById("carname");
+cname.textContent='car name : '+car.name;
+
+var colname=document.getElementById("carcolor");
+colname.textContent='car color : '+car.color;
+
+var cspeed=document.getElementById("carspeed");
+cspeed.textContent='car speed : '+car.speedup();
+
+
+
+</script>
+
+</body>
+</html>

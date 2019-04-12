@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+    function textstyle(){
+        document.getElementById("msg").style.color="blue";
+         document.getElementById("msg").style.fontSize="30px";
+          document.getElementById("msg").style.fontStyle="italic";
+    }
+
+    function texthidden() {
+        document.getElementById("msg").style.visibility="hidden";
+    }
+
+    function textvisible(){
+        document.getElementById("msg").style.visibility="visible";
+    }
+
+    
+</script>
+</head>
+<body>
+
+
+
+<p id="msg">text object style</p>
+<input type="button" onclick="textstyle()" value="text style change">
+<input type="button" onclick="texthidden()" value="hide text">
+<input type="button" onclick="textvisible()" value="visible text">
+
+</body>
+</html>

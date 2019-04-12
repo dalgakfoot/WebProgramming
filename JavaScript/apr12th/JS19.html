@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="d1"></p>
+<p id="d2"></p>
+<p id="d3"></p>
+<p id="d4"></p>
+
+<script>
+
+    var today = new Date();
+
+    document.getElementById("d1").innerHTML = today.getFullYear()+"Y";
+    document.getElementById("d2").innerHTML = today.getMonth()+1+"M"+today.getDate()+"D";
+    document.getElementById("d3").innerHTML = today.getHours()+"H"+today.getMinutes()+"M"+today.getSeconds()+"S";
+
+
+</script>
+
+</body>
+</html>

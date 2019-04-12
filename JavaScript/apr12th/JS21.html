@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script>
+
+    var img
+    function add() {
+        img = document.createElement('img'); img.src='resources/img.jpg';
+        img.width=200; img.height=200; document.body.appendChild(img);
+    }
+
+    function remove() {document.body.removeChild(img);}
+
+
+    
+</script>
+
+    <a href="#" onclick="add()">[add image]</a>
+    <a href="#" onclick="remove()">[delete image]</a>
+
+
+</body>
+</html>

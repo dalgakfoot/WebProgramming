@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="digClock01"></div>
+<button onclick="test()">Click me</button>
+
+<script>
+
+    function digClock(){
+
+        var today = new Date();
+        var day = today.getMonth()+1+"M"+today.getDate()+"D";
+        var time= today.getHours()+"H"+today.getMinutes()+"M"+today.getSeconds()+"S";
+
+        document.getElementById("digClock01").innerHTML=day+time;
+        setTimeout('digClock()',1000);
+
+
+    }
+
+    var cnt=1;
+    function test(){
+        console.log("click me click me!"+cnt++)
+    }
+    digClock();
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    </head>
+    <body>
+    <script>
+        
+
+        var data01 = [1,2,3,4,5,6,7,8,9,10];
+        
+
+        function mapArr01(v) {
+            return v*v;
+        }
+
+        data02 = [];
+
+        for(i=0;i<data01.length;i++){
+            data02[i]=mapArr01(data01[i]);
+        }
+
+        document.write("pre-arr : "+data01+"<p>");
+        document.write("post-arr : "+data02+"<p>");
+
+            document.write("========================================<p>");
+            
+                var data = [1,2,3,4,5,6,7,8,9,10];
+
+                function mapArr(value){
+                    return value*value;
+                }
+
+                var mapdata = data.map(mapArr);
+                document.write("pre-arr : "+data+"<p>");
+        document.write("post-arr : "+mapdata+"<p>");
+    
+
+
+
+        </script>
+    </body>
+    </html>

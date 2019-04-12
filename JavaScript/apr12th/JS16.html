@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="carname"></p>
+<p id="idcarcolor"></p>
+<p id="carspeed"></p>
+
+<script>
+
+    var car={name : 'sonata',speed: 50 , color:'white', start:function() {return this.speed+10;} 
+    };
+
+    var cname = document.getElementById("carname");
+
+    cname.innerHTML=car.name;
+
+    var colname=document.getElementById("idcarcolor");
+
+    colname.innerHTML=car.color;
+
+    var cspeed = document.getElementById("carspeed");
+
+    cspeed.innerHTML=car.start();
+
+    
+
+</script>
+
+
+
+</body>
+</html>

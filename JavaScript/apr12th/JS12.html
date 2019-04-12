@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+
+    var data =[21,42,33,14,25,12,37,28,16,11];
+
+    function filterArr(value) {
+        return value>=18;
+    }
+
+    var fdata = data.filter(filterArr);
+
+    document.write("pre- : "+data+"<p>");
+    document.write("post- : "+fdata+"<p>");
+
+
+
+</script>
+</body>
+</html>
