@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    #remove{display:none;}
+    #remove.a{display:block;border:5px brown solid;background: gold;
+    width:500px;height:30%;opacity: 1;}
+    
+
+    #img1{height:100px;width:100px;}
+    #img2{height:100px;width:100px;}
+    #img3{height:100px;width:100px;}
+
+    #popup{height:100%;width:100%;}
+    #hr1{border:0;height:5px;background: black;}
+
+    h6{padding:0 20px 0 0;text-align:right}
+
+
+   #gray.click{background: #BDBDBD;opacity: 0.1;}
+
+
+
+
+
+    </style>
+
+
+    <script>
+    
+    var img1;
+    var img2;
+    var img3;
+    var popup;
+    var x;
+
+   
+
+    function init() {
+        img1=document.getElementById('img1');
+        img2=document.getElementById('img2');
+        img3=document.getElementById('img3');
+        popup=document.getElementById('popup');
+        x=document.getElementById('x');
+      
+
+        img1.addEventListener('click',click_listener);
+        img2.addEventListener('click',click_listener);
+        img3.addEventListener('click',click_listener);
+        x.addEventListener('click',close_listener);
+    }
+
+    function click_listener(event){
+
+        switch(event.target.id){
+            case 'img1' :{
+             popup.src=img1.src; 
+             
+            let gray = document.querySelector('#gray');
+            gray.setAttribute('class','click');
+
+            let remove = document.querySelector('#remove');
+             remove.setAttribute('class','a');
+
+             break;
+             }
+            case 'img2' :{
+             popup.src=img2.src; 
+              let gray = document.querySelector('#gray');
+            gray.setAttribute('class','click');
+             let remove = document.querySelector('#remove');
+             remove.setAttribute('class','a');
+             break;
+             }
+            case 'img3' :{
+             popup.src=img3.src; 
+              let gray = document.querySelector('#gray');
+            gray.setAttribute('class','click');
+             let remove = document.querySelector('#remove');
+             remove.setAttribute('class','a');
+             break;
+             }
+        }
+
+    }
+
+    function close_listener(event){
+        let remove = document.querySelector('#remove');
+        remove.removeAttribute('class');
+        let gray = document.querySelector('#gray');
+        gray.removeAttribute('class');
+    }
+    
+    </script>
+
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body onload="init()">
+
+    <div id="gray">
+
+        <div><h3>light box</h3></div>
+        <div>
+            <img id="img1" src="resources/car01.png">
+            <img id="img2" src="resources/car02.png">
+            <img id="img3" src="resources/car03.png">
+        </div>
+        </div>
+
+        <div id="remove">
+            <h6 id="x">X</h6>
+            <h4 style="text-align:center">2 0 1 9 Super_Car</h4>
+            <hr id="hr1">
+            <img id="popup" src="resources/car01.png">
+        </div>
+
+
+
+
+    
+
+
+
+
+</body>
+</html>

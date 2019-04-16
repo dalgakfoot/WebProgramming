@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+    /* display:none -> 현재 디스플레이 안보이게 하겠다.*/
+    #remove{display:none}
+    #remove.a{display:block;background:green;}
+
+</style>
+<script>
+
+    function init(){
+        var t1= document.getElementById('target1');
+        var t2= document.getElementById('target2');
+        t1.addEventListener('click',btn_listener);
+        t2.addEventListener('click',btn_listener);
+    }
+
+    function btn_listener(event){
+        console.log("event : "+event);
+        console.log("event.target : "+event.target);
+        console.log("event.target.id : " + event.target.id);
+        switch(event.target.id){
+            case 'target1':alert(1+' choice : target1'); break;
+            case 'target2':alert(2+" choice : target2"); break;
+        }
+     let remove = document.querySelector('#remove');
+    // querySelector : 하위에 있는 값을 선택
+        remove.setAttribute('class','a');
+    }
+
+    function blockRM() {
+        let remove = document.querySelector('#remove');
+        remove.removeAttribute('class');
+    }
+
+
+
+</script>
+</head>
+<body onload="init()">
+
+
+    <input type="button" id="target1" value="button1">
+    <input type="button" id="target2" value="button2">
+
+    <div id="remove">
+        <h3>hi!</h3>
+        <input type="button" value='rollback' onclick="blockRM()">
+
+    </div>
+    <div>
+        <h1>rollback practice</h1>
+    </div>
+
+</body>
+</html>
