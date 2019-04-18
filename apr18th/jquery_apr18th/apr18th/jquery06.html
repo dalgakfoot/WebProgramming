@@ -1,0 +1,36 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $("#hide").click(function() {
+                    $("img").hide("slow");
+                
+                });
+                $("#show").click(function() {
+                    $("img").show("fast");
+                
+                });
+                $("#toggle").click(function() {
+                    $("img").toggle(3000);
+                
+                });
+                
+            });
+
+        </script>
+        
+    </head>
+    <body>
+
+    <button id="hide">hide</button> <button id="show">show</button>
+    <button id="toggle">toggle</button>
+        <p></p>
+        <img name='pic1' src='car01.png'>
+
+    </body>
+    </html>

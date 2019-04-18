@@ -1,0 +1,45 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+        <script src="jquery-3.2.1.min.js"></script>
+        <script type="text/javascript">
+           
+           function move(obj, time) {
+            $(obj).stop().animate({ left:-350, top:0 }, time);
+        }
+        function back(css) {
+            $(css).stop().animate({ left:0, top:0 });
+        }
+
+        </script>
+        
+        <style type="text/css">
+        
+            img{width:200px;height: 150px;}
+            .moving {border:1px solid #000000; margin: 20px auto 0 auto; text-align: right;width:550px;}
+            .moving img{cursor: pointer; position: relative;}
+
+
+        </style>
+
+
+
+
+
+    </head>
+    <body>
+
+       <div id="init"><button onclick="back('.moving img')">initialize status</button></div>
+        <div class="moving">
+
+            <img onclick="move(this, 6000)" src="car01.png"><br>
+            <img onclick="move(this, 3000)" src="car01.png"><br>
+            <img onclick="move(this, 1000)" src="car01.png"><br>
+            
+        </div>
+
+
+    </body>
+    </html>

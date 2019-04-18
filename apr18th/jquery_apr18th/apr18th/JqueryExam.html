@@ -1,0 +1,141 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <script src="jquery-3.2.1.min.js"></script>
+            <script src="jquery-1.12.1-ui.js"></script>
+
+            <script>
+            
+               
+
+
+               
+
+            $(document).ready(function (){
+
+                var size1;
+                var size2;
+                var size3;
+                var size4;
+                
+                var num;
+               var unit;
+                
+
+                var $font1 = $("#font1");
+                var $font2=  $("#font2");
+                var $font3 = $("#font3");
+                var $font4 = $("#font4");
+
+
+                size1= $font1.css("fontSize");
+                size2= $font2.css("fontSize");
+                size3= $font3.css("fontSize");
+                size4= $font4.css("fontSize");
+
+
+                num1 = parseFloat(size1);
+                num2 = parseFloat(size2);
+                num3 = parseFloat(size3);
+                num4 = parseFloat(size4);
+
+                console.log(num2);
+                unit = size1.slice(-2);
+                console.log(unit);
+              
+              
+
+                
+                console.log("size1 : "+size1)
+              
+                
+                             
+
+                $("#x").text(size1);
+                $("#draggable").draggable();
+
+                $("#add").click(function(){
+                   
+                $font1.css("fontSize",(++num1)+unit);
+                $font2.css("fontSize",(++num2)+unit);
+                $font3.css("fontSize",(++num3)+unit);
+                $font4.css("fontSize",(++num4)+unit);
+
+                  size1= $font1.css("fontSize");
+                   $("#x").text(size1);
+                    
+                });
+
+                $("#sub").click(function(){
+                   
+                  $font1.css("fontSize",(--num1)+unit);
+                  $font2.css("fontSize",(--num2)+unit);
+                  $font3.css("fontSize",(--num3)+unit);
+                  $font4.css("fontSize",(--num4)+unit);
+
+                  size1= $font1.css("fontSize");
+                   $("#x").text(size1);
+                    
+                });
+
+            });
+
+          
+
+            </script>
+
+            <style>
+            
+
+                div>p{font-weight: 1000}
+
+                .drag{width:200px; height:100px; padding:0.5em;background-color: white;border-style: solid;
+                text-align: center; position: fixed;}
+
+                #inner{display: flex; padding:10% 0 10% 10%}
+                #inner>p{background: yellow; width:50%; height:5%;}
+                #inner>img{height:30px;width:30px;cursor: pointer;}
+
+
+
+            </style>
+
+
+        <meta charset="UTF-8">
+        <title>JQuery exam</title>
+        </head>
+        <body>
+
+            <div>
+                <p id ="font1" style="font-size:50px;">
+                            오늘의 소설 
+                </p>
+                <p id ="font2" style="font-size:30px;">
+                             오늘도 덥다
+                </p>
+                <p id ="font3" style="font-size:30px;">
+                             내일도 덥다
+                </p>
+                <p id ="font4" style="font-size:30px;">
+                            모래는 바다
+                </p>
+            </div>
+
+            <div id="draggable" class="drag">
+
+                <div style="background: gold;">리모컨</div>
+                <div id="inner">
+                    
+                    <img src="add.png" id="add">
+                   
+                    <p id="x"> x </p>
+                    <img src="sub.jpg" id="sub">
+                
+                </div>
+
+            </div>
+
+
+
+        </body>
+        </html>

@@ -1,0 +1,57 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+        <script src="jquery-3.2.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $("#panel").click(function() {
+                    $("#panel").slideUp("fast");
+                
+                });
+                $("#slide").click(function() {
+                    $("#panel").slideDown(5000);
+                
+                });
+                $("#flip").click(function() {
+                    $("#panel").slideToggle("slow");
+                
+                });
+
+                 $("#stop").click(function() {
+                    $("#panel").stop();
+                
+                });
+               
+                
+            });
+
+        </script>
+        
+        <style>
+        
+            #slide, #panel, #flip {padding: 5px; text-align: center; background-color: #e5eecc; border: solid 1px #c3c3c3;}
+
+            #panel {padding: 70px; display: none; background-color: #ffff00;}
+
+
+
+        </style>
+
+
+
+
+
+    </head>
+    <body>
+
+        <div id="slide">[today's notice!]</div>
+        <div id="panel">today we'll study about jQuery
+        <br> code a example and excute!</div>
+        <div id="flip">Toggle slide</div>
+        <p></p>
+        <button id="stop">Stop sliding</button>
+    </body>
+    </html>
