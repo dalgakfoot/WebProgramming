@@ -17,12 +17,18 @@
 <c:set var="chkID" value="${dao.ckFindPwd(param.id) }"/>
 
 
-<c:if test="${fn:length(chkID) == null } ">
-아이디를 확인 하시길 바랍니다.
-</c:if>
-<c:forEach var="showPwd" items="${chkID }"> 
- 당신의 비번은 ${showPwd.pwd} 입니다. 
-</c:forEach>
+<c:if test="${chkID.size() == 0}">
+		<script type="text/javascript">
+			alert("해당하는 비밀번호를 찾을 수 없습니다.\n아이디를 다시 입력해주세요.");
+			location.href = "findPwd.jsp";
+		</script>
+	</c:if>
+	<c:forEach var="showPwd" items="${chkID }">
+		<script>
+			alert("당신의 비밀번호는 ${showPwd.pwd} 입니다.");
+			location.href = "login.jsp";
+		</script>
+	</c:forEach>
 
 
 </body>

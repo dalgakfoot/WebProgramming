@@ -9,9 +9,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:useBean id="dao"  class=loginDB.joinDAO"/>
+<jsp:useBean id="dao"  class="loginDB.joinDAO"/>
 ${dao.delete(sessionScope.userid) }
 <% session.invalidate(); %>
-<c:redirect url="index.jsp"/> 
+<script>
+window.close();
+</script>
 </body>
 </html>

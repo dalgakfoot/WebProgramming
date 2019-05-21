@@ -81,7 +81,8 @@ input {
 					<li><img src="./tototo.gif" width="200" height="400"></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right navbar-user">
-
+					<li style="width:1550px"><marquee direction="left"><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i>&nbsp;Welcome to the KGITBANK 토토! 
+다른 사이트와는 차별화된 건전하게 즐기는 승부예측게임! 먹튀 걱정 없는 공식인증 사이트!&nbsp;<i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i></marquee></li>
 					<li class="dropdown user-dropdown"><c:choose>
 							<c:when test="${sessionScope.userid != null }">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">

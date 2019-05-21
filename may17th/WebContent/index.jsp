@@ -88,13 +88,17 @@
 	<div id="wrapper">
 		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
+			
+			
+			
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target=".navbar-ex1-collapse">
 					<span class="sr-only">Toggle navigation</span> <span
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp">KGITBANK 토토</a>
+			<a class="navbar-brand" href="index.jsp">KGITBANK 토토</a>
+				
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul id="active" class="nav navbar-nav side-nav">
@@ -118,8 +122,10 @@
 							Bootstrap Grid</a></li> -->
 							<li><img src="./tototo.gif" width="200" height="400"></li>
 				</ul>
+				
 				<ul class="nav navbar-nav navbar-right navbar-user">
-
+					<li style="width:1550px"><marquee direction="left"><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i>&nbsp;Welcome to the KGITBANK 토토! 
+다른 사이트와는 차별화된 건전하게 즐기는 승부예측게임! 먹튀 걱정 없는 공식인증 사이트!&nbsp;<i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i></marquee></li>
 					<li class="dropdown user-dropdown"><c:choose>
 							<c:when test="${sessionScope.userid != null }">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -160,6 +166,16 @@
 				</div>
 			</div> -->
 			<div class="row">
+				<div class="alert alert-dismissable alert-warning">
+						<button data-dismiss="alert" class="close" type="button">&times;</button>
+						여러분! 베팅 후 먹튀걱정에 환전하기 두려운 토토사이트들 때문에 마음 고생 많으셨죠?<br>
+
+그런 유저님들을 위해 수많은 토토사이트, 스포츠토토, 파워볼 사이트 중에서 먹튀검증 후 먹튀없는 안전놀이터입니다.<br>
+
+본 사이트는 뛰어난 운영능력, 보안성 높은 안전놀이터, 먹튀없는 자본력을 자랑합니다.<br>
+
+저희는 반드시 보증합니다. 지금 바로 이용해보세요.
+					</div>
 				<div class="col-lg-12">
 					<c:choose>
 						<c:when test="${sessionScope.userid==null }">
@@ -191,7 +207,9 @@
 
 		<!-- /#wrapper -->
 	</div>
-
+			<footer>
+				<jsp:include page="./footer.jsp" />
+			</footer>
 
 
 

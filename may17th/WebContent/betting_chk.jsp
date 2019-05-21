@@ -27,6 +27,20 @@ history.back();
 </script>
 </c:when>
 
+<c:when test="${param.team==null }">
+<script>
+alert("배팅할 팀을 선택해주세요!");
+history.back();
+</script>
+</c:when>
+
+<c:when test="${param.money==0 }">
+<script>
+alert("배팅할 금액을 입력해주세요!");
+history.back();
+</script>
+</c:when>
+
 <c:otherwise>
 ${dao.bettingUp(dto) }
 <script>

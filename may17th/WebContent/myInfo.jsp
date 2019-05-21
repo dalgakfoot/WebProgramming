@@ -75,31 +75,29 @@ div {
 							<li><img src="./tototo.gif" width="200" height="400"></li>
 								</ul>
 								<ul class="nav navbar-nav navbar-right navbar-user">
-					
-					<li class="dropdown user-dropdown">
-					
-					
-					
-					<c:choose>
+					<li style="width:1550px"><marquee direction="left"><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i>&nbsp;Welcome to the KGITBANK 토토! 
+다른 사이트와는 차별화된 건전하게 즐기는 승부예측게임! 먹튀 걱정 없는 공식인증 사이트!&nbsp;<i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i></marquee></li>
+					<li class="dropdown user-dropdown"><c:choose>
 							<c:when test="${sessionScope.userid != null }">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="fa fa-user"></i> ${sessionScope.userid} 님<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="myInfo.jsp"><i class="fa fa-user"></i> 마이페이지</a></li>
-							<li class="divider"></li>
-							<li><a href="logout.jsp"><i class="fa fa-power-off"></i> 로그아웃</a></li>
-						</ul>
-							
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="fa fa-user"></i> ${sessionScope.userid} 님<b
+									class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="myInfo.jsp"><i class="fa fa-user"></i>
+											마이페이지</a></li>
+									<li class="divider"></li>
+									<li><a href="logout.jsp"><i class="fa fa-power-off"></i>
+											로그아웃</a></li>
+								</ul>
+
 							</c:when>
 							<c:otherwise>
-							
+
 							</c:otherwise>
-						</c:choose>
-					</li>
+						</c:choose></li>
 					<li class="divider-vertical"></li>
-					<li>
-						
-					</li>
+					<li></li>
 				</ul>
 							</div>
 						</nav>
@@ -171,7 +169,7 @@ div {
 								<div class="col-md-2"></div>
 								<div class="col-md-10" align="center">
 									<button type="submit" class="btn btn-info">회원정보수정</button>
-									<input type="button" onclick="location.href='withdraw.jsp'"
+									<input type="button" onclick="window.open('./withdraw.jsp','회원탈퇴','width=600, height=400'); return false"
 										class="btn btn-info" value="회원탈퇴">
 									<input type="button" onclick="history.back()" class="form-control btn btn-primary" style="width: 100px;" value="뒤로가기">
 								</div>
@@ -179,7 +177,7 @@ div {
 						</div>
 					</div>
 				</form>
-
+					
 			</div>
 			<footer>
 				<jsp:include page="./footer.jsp" />

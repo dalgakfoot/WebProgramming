@@ -55,7 +55,7 @@
 
 					<div align="center">
 						<table class="table table-striped"
-							style="height: 20px; width: 200px;">
+							style="height: 20px; width: 400px;">
 							<tr>
 								<td colspan="4"><a href="myInfo.jsp">${sessionScope.userid }님</a> 환영합니다!</td>
 							</tr>

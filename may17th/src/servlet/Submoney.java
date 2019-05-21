@@ -55,7 +55,7 @@ public class Submoney extends HttpServlet {
 		
 		
 		
-		response.sendRedirect("/may10th/adminPage.jsp");
+		response.sendRedirect("/may16tha/adminPage.jsp");
 		
 		
 	}

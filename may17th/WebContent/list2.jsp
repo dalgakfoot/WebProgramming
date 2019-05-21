@@ -69,31 +69,36 @@
 							<li><img src="./tototo.gif" width="200" height="400"></li>
 				</ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
-                    
-                    <li class="dropdown user-dropdown">
-                        <c:choose>
+					<li style="width:1550px"><marquee direction="left"><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i>&nbsp;Welcome to the KGITBANK 토토! 
+다른 사이트와는 차별화된 건전하게 즐기는 승부예측게임! 먹튀 걱정 없는 공식인증 사이트!&nbsp;<i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i></marquee></li>
+					<li class="dropdown user-dropdown"><c:choose>
 							<c:when test="${sessionScope.userid != null }">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						<i class="fa fa-user"></i> ${sessionScope.userid} 님<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="myInfo.jsp"><i class="fa fa-user"></i> 마이페이지</a></li>
-							<li class="divider"></li>
-							<li><a href="logout.jsp"><i class="fa fa-power-off"></i> 로그아웃</a></li>
-						</ul>
-							
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="fa fa-user"></i> ${sessionScope.userid} 님<b
+									class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="myInfo.jsp"><i class="fa fa-user"></i>
+											마이페이지</a></li>
+									<li class="divider"></li>
+									<li><a href="logout.jsp"><i class="fa fa-power-off"></i>
+											로그아웃</a></li>
+								</ul>
+
 							</c:when>
 							<c:otherwise>
-							
+
 							</c:otherwise>
-						</c:choose>
-                    </li>
-                </ul>
+						</c:choose></li>
+					<li class="divider-vertical"></li>
+					<li></li>
+				</ul>
             </div>
         </nav>
         <hr/>        
 		<fmt:requestEncoding value="utf-8"/>
 		<jsp:useBean id="dao" class="board.totoDAO" />
-		<c:set var="userid" value="test1" scope="session"/>	
+		
 		<!-- 페이지  -->
 		<c:set var="totalPage" value="${dao.totalPage() }"/>
 		<fmt:parseNumber var="number" integerOnly="true" value="${totalPage/10}"/> <!-- 정수로만 표현 -->
@@ -139,8 +144,8 @@
 									<c:forEach var="gmDTO" items="${dao.gmList() }">
 									<fmt:formatDate value="${gmDTO.savedate}" pattern="yyyy-MM-dd" var="today"/>
 										<tr>
-										<td>공지</td> <td>${gmDTO.name}</td><td><a href="content_view_gm2.jsp?userId=${sessionScope.userid}&chk=${0}&num=${gmDTO.num}">${gmDTO.title}</a></td>
-										<td><c:out value="${today }"/></td> <td>${gmDTO.hit}</td>
+										<td style="color:#FF7E7E;">공지</td> <td style="color:#FF7E7E;">${gmDTO.name}</td><td style="color:#FF7E7E;"><a href="content_view_gm2.jsp?userId=${sessionScope.userid}&chk=${0}&num=${gmDTO.num}" td style="color:#FF7E7E;">${gmDTO.title}</a></td>
+										<td style="color:#FF7E7E;"><c:out value="${today }"/></td> <td style="color:#FF7E7E;">${gmDTO.hit}</td>
 										</tr>		
 									</c:forEach>
 									
@@ -168,10 +173,10 @@
 										<div style="text-align: right; word-spacing: 30px;">
 										<c:choose>
 											<c:when test="${start >1 }">
-												<button onclick="location.href='list2.jsp?start=${start-1}'">이전</button>
+												<button class="btn btn-primary" onclick="location.href='list2.jsp?start=${start-1}'">이전</button>
 											</c:when>
 											<c:otherwise>
-												<button disabled="disabled">이전</button>
+												<button class="btn btn-warning" disabled="disabled">이전</button>
 											</c:otherwise>
 										</c:choose>
 										<c:forEach begin="1" end="${pageCnt}" step="1" var="cnt">
@@ -179,10 +184,10 @@
 										</c:forEach>												
 										<c:choose>
 											<c:when test="${start < pageCnt }">
-												<button onclick="location.href='list2.jsp?start=${start+1}'">다음</button>
+												<button class="btn btn-primary" onclick="location.href='list2.jsp?start=${start+1}'">다음</button>
 											</c:when>
 											<c:otherwise>
-												<button disabled="disabled">다음</button>
+												<button class="btn btn-warning" disabled="disabled">다음</button>
 											</c:otherwise>
 										</c:choose>
 										
@@ -197,7 +202,7 @@
 										
 										</div>
 											<form action="searchList2.jsp">
-											<input type="text" name="search" placeholder="검색할 제목을 입력하세요">&nbsp;&nbsp;<input style="color: black;" type="submit" value="검색">
+											<input type="text" name="search" placeholder="검색할 제목을 입력하세요">&nbsp;&nbsp;<input class="btn btn-primary" type="submit" value="검색">
 						 					</form>					
 							</c:otherwise>
 						</c:choose>

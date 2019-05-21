@@ -44,58 +44,60 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Back to Admin</a>
+                <a class="navbar-brand" href="index.html">KGITBANK 토토</a>
             </div>
             <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav side-nav">
-                    <li><a href="index.html"><i class="fa fa-bullseye"></i> Dashboard</a></li>
-                    <li class="selected"><a href="portfolio.html"><i class="fa fa-tasks"></i> Portfolio</a></li>
-                    <li><a href="blog.html"><i class="fa fa-globe"></i> Blog</a></li>
-                    <li><a href="signup.html"><i class="fa fa-list-ol"></i> SignUp</a></li>
-                    <li><a href="register.html"><i class="fa fa-font"></i> Register</a></li>
-                    <li><a href="timeline.html"><i class="fa fa-font"></i> Timeline</a></li>
-                    <li><a href="forms.html"><i class="fa fa-list-ol"></i> Forms</a></li>
-                    <li><a href="typography.html"><i class="fa fa-font"></i> Typography</a></li>
-                    <li><a href="bootstrap-elements.html"><i class="fa fa-list-ul"></i> Bootstrap Elements</a></li>
-                    <li><a href="bootstrap-grid.html"><i class="fa fa-table"></i > Bootstrap Grid</a></li>            
-                </ul>
+                <ul id="active" class="nav navbar-nav side-nav">
+					<li><a href="index.jsp"><i
+							class="fa fa-bullseye"></i> Home</a></li>
+					<li><a href="./game3.jsp"><i class="fa fa-tasks"></i> 경기일정</a></li>
+					<li><a href="setMoney.jsp"><i class="fa fa-globe"></i>
+							머니충전</a></li>
+					<li class="selected"><a href="list2.jsp"><i class="fa fa-list-ol"></i>
+							자유게시판</a></li>
+					<li><a href="myInfo.jsp"><i class="fa fa-font"></i> 마이페이지</a></li>
+					<li><a href="ranking.jsp"><i class="fa fa-list-ol"></i>
+							랭킹</a></li>
+					<!--<li><a href="forms.html"><i class="fa fa-list-ol"></i>
+							Forms</a></li>
+					<li><a href="typography.html"><i class="fa fa-font"></i>
+							Typography</a></li>
+					<li><a href="bootstrap-elements.html"><i
+							class="fa fa-list-ul"></i> Bootstrap Elements</a></li>
+					<li><a href="bootstrap-grid.html"><i class="fa fa-table"></i>
+							Bootstrap Grid</a></li> -->
+							<li><img src="./tototo.gif" width="200" height="400"></li>
+				</ul>
                 <ul class="nav navbar-nav navbar-right navbar-user">
-                    <li class="dropdown messages-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">2</span> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li class="dropdown-header">2 New Messages</li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <span class="avatar"><i class="fa fa-bell"></i></span>
-                                    <span class="message">Security alert</span>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li class="message-preview">
-                                <a href="#">
-                                    <span class="avatar"><i class="fa fa-bell"></i></span>
-                                    <span class="message">Security alert</span>
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li><a href="#">Go to Inbox <span class="badge">2</span></a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown user-dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Steve Miller<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-                            <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
+					<li style="width:1550px"><marquee direction="left"><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i>&nbsp;Welcome to the KGITBANK 토토! 
+다른 사이트와는 차별화된 건전하게 즐기는 승부예측게임! 먹튀 걱정 없는 공식인증 사이트!&nbsp;<i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i></marquee></li>
+					<li class="dropdown user-dropdown"><c:choose>
+							<c:when test="${sessionScope.userid != null }">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="fa fa-user"></i> ${sessionScope.userid} 님<b
+									class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="myInfo.jsp"><i class="fa fa-user"></i>
+											마이페이지</a></li>
+									<li class="divider"></li>
+									<li><a href="logout.jsp"><i class="fa fa-power-off"></i>
+											로그아웃</a></li>
+								</ul>
+
+							</c:when>
+							<c:otherwise>
+
+							</c:otherwise>
+						</c:choose></li>
+					<li class="divider-vertical"></li>
+					<li></li>
+				</ul>
             </div>
         </nav>
         <hr/>
         <div class="panel-heading">
-        	<h3 class="panel-title" align="center"> [Personal bulletin board] </h3>
+        	
         </div>
 		<fmt:requestEncoding value="utf-8" />
 	<jsp:useBean id="dao" class="board.totoDAO"/>
@@ -139,7 +141,7 @@
 	</div>
 	
 		<form action="reply2" method="get">
-			<table border="1">	
+			<table class="table">	
            <tr>
                <!-- 아이디-->
                <td width="150" align="center" style="color: skyblue; font-size: 14pt;">
@@ -150,12 +152,12 @@
               	 <input type="hidden" name="id" value="${dto.id}">
               	 <input type="hidden" name="replyId" value="${sessionScope.userid }">
               	 <input type="hidden" name="userId" value="${param.userId}">
-                 <textarea name="content" rows="4" cols="70" ></textarea>                                        
+                 <textarea name="content" rows="4" cols="200" ></textarea>                                        
                </td>
                <!-- 댓글 등록 버튼 -->
                <td width="100">
                    <div style="text-align:center;">
-                       <p><input style="color: black;" type="submit" value="댓글달기"></p>    
+                       <p><input class="btn btn-primary" type="submit" value="댓글달기"></p>    
                    </div>
                </td>
            	</tr>    	 	  

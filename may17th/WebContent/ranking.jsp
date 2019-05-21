@@ -61,7 +61,7 @@
 									경기일정</a></li>
 							<li><a href="setMoney.jsp"><i class="fa fa-globe"></i>
 									머니충전</a></li>
-							<li><a href="signup.html"><i class="fa fa-list-ol"></i>
+							<li><a href="list2.jsp"><i class="fa fa-list-ol"></i>
 									자유게시판</a></li>
 							<li><a href="myInfo.jsp"><i class="fa fa-font"></i>
 									마이페이지</a></li>
@@ -78,29 +78,30 @@
 							<li><img src="./tototo.gif" width="200" height="400"></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right navbar-user">
+					<li style="width:1550px"><marquee direction="left"><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i>&nbsp;Welcome to the KGITBANK 토토! 
+다른 사이트와는 차별화된 건전하게 즐기는 승부예측게임! 먹튀 걱정 없는 공식인증 사이트!&nbsp;<i class="fa fa-dollar"></i><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i></marquee></li>
+					<li class="dropdown user-dropdown"><c:choose>
+							<c:when test="${sessionScope.userid != null }">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<i class="fa fa-user"></i> ${sessionScope.userid} 님<b
+									class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="myInfo.jsp"><i class="fa fa-user"></i>
+											마이페이지</a></li>
+									<li class="divider"></li>
+									<li><a href="logout.jsp"><i class="fa fa-power-off"></i>
+											로그아웃</a></li>
+								</ul>
 
-							<li class="dropdown user-dropdown"><c:choose>
-									<c:when test="${sessionScope.userid != null }">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-user"></i> ${sessionScope.userid} 님<b
-											class="caret"></b>
-										</a>
-										<ul class="dropdown-menu">
-											<li><a href="myInfo.jsp"><i class="fa fa-user"></i>
-													마이페이지</a></li>
-											<li class="divider"></li>
-											<li><a href="logout.jsp"><i class="fa fa-power-off"></i>
-													로그아웃</a></li>
-										</ul>
+							</c:when>
+							<c:otherwise>
 
-									</c:when>
-									<c:otherwise>
-
-									</c:otherwise>
-								</c:choose></li>
-							<li class="divider-vertical"></li>
-							<li></li>
-						</ul>
+							</c:otherwise>
+						</c:choose></li>
+					<li class="divider-vertical"></li>
+					<li></li>
+				</ul>
 					</div>
 				</nav>
 		</c:when>
@@ -145,5 +146,8 @@
 			</div>
 		</div>
 	</div>
+	<footer>
+				<jsp:include page="./footer.jsp" />
+			</footer>
 </body>
 </html>

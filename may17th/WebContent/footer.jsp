@@ -8,6 +8,7 @@
 </head>
 <body align="center">
 <hr>
-개인정보처리방침 | 기타 | 등등 | Tel.02-222-2222
+(주)KG ITBANK TOTO ㅣ 대표자명 김석래 ㅣ 사업자등록번호 777-77-777 서울특별시 종로구 단성사 5층 고객센터 119
+COPYRIGHTⓒ KG ITBANK TOTO CO.,LTD ALL RIGHT RESERVED
 </body>
 </html>

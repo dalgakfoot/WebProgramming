@@ -14,20 +14,24 @@
 </head>
 <body>
 <fmt:requestEncoding value="utf-8"/>
-넘어온 값은 param은,,,,
-${param.phoneNo }
+
 <jsp:useBean id="dao" class="loginDB.joinDAO"/>
 <jsp:useBean id="dto" class="loginDB.joinDTO"/>
 <jsp:setProperty property="*" name="dto" />
 <c:set var="chkphoneNo" value="${dao.ckFindId(param.phoneNo) }"/>
 
-
-
-<c:if test="${fn:length(chkphoneNo) == null } ">
-아이디를 찾을 수 없습니다.
+<c:if test="${chkphoneNo.size() == 0}">
+<script type="text/javascript">
+	alert("해당하는 아이디를 찾을 수 없습니다.\n전화번호를 다시 입력해주세요.");
+	location.href="findId.jsp";
+</script>
 </c:if>
+
 <c:forEach var="showId" items="${chkphoneNo }"> 
- 당신의 아이디는 ${showId.id } 입니다. 
+	<script>
+	alert("당신의 아이디는 ${showId.id} 입니다.")
+	location.href="login.jsp";
+	</script>
 </c:forEach>
 
 

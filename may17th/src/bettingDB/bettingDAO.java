@@ -259,6 +259,36 @@ public class bettingDAO {
 		
 	}
 	
+	public bettingDTO iszero(int id) {
+		bettingDTO b = null;
+		String sql = "select * from betting where id = ?";
+		try {
+			con= DriverManager.getConnection(url,user,pwd);
+			ps = con.prepareStatement(sql);
+			ps.setInt(1, id);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				b = new bettingDTO();
+				b.setId(rs.getInt("id"));
+				b.setTeam(rs.getString("team"));
+				b.setMoney(rs.getInt("money"));
+				b.setUserid(rs.getString("userid"));
+				
+				
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}finally {
+			 if (rs != null) try { rs.close(); } catch(SQLException ex) {}
+		     if (ps != null) try { ps.close(); } catch(SQLException ex) {}
+		     if (con != null) try { con.close(); } catch(SQLException ex) {}
+		}
+		
+		return b;
+	}
+	
 
 
 }

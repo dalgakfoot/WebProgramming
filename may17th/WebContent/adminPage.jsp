@@ -153,6 +153,7 @@
 				out.print("<td>"+"<button class='btn btn-warning' disabled>돈 분배하기</button>"+"</td>");
 			
 			}else if(bet.isgive(g.getId())==0){%>
+				<%if(bet.iszero(g.getId())!=null){%>
 				<!-- out.print("<td>"+"<button onclick=location.href="+"'../SubMoney?id="+g.getId()+"&win="+g.getWin()+"'>돈 분배하기</button></td>"); -->
 				<td>
 				<form action="Submoney" method="post">
@@ -162,9 +163,10 @@
 				
 				</form>
 				</td>
+				<%} %>
 			
 		<%}else{%>
-			<td><button disabled>돈 분배하기</button></td>
+			<td><button class="btn btn-warning" disabled>돈 분배하기</button></td>
 			
 		<%}}%>
 		

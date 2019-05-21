@@ -58,6 +58,8 @@
 
 
 </c:choose>
+<div align="right" style="padding-right: 10px;">
 <input type="button" class="btn btn-primary" onclick="window.close()" value="닫기">
+</div>
 </body>
 </html>

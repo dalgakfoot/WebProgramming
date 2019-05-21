@@ -136,9 +136,9 @@ public class joinDAO {
 	}
 
 	public ArrayList<joinDTO> ckFindId(String no) {
-		System.out.println(no);
 		String sql ="select userid from inform where phoneNo=? ";
-		ArrayList<joinDTO> showId = new ArrayList<joinDTO>();
+		ArrayList<joinDTO> arr = new ArrayList<>();
+		
 		try {
 			con = DriverManager.getConnection(url,user,pwd);
 			ps = con.prepareStatement(sql);
@@ -147,8 +147,8 @@ public class joinDAO {
 
 			while(rs.next()) {
 				joinDTO dto = new joinDTO();
-				dto.setId(rs.getString("id"));
-				showId.add(dto);
+				dto.setId(rs.getString("userid"));
+				arr.add(dto);
 			}
 
 
@@ -159,9 +159,9 @@ public class joinDAO {
 			if (ps != null) try { ps.close(); } catch(SQLException ex) {}
 			if (con != null) try { con.close(); } catch(SQLException ex) {}
 		}
-		System.out.println(showId);
 
-		return showId;
+		
+		return arr;
 
 	}
 

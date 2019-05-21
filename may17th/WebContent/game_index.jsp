@@ -19,7 +19,7 @@
 
 
 	<div class="row">
-		<div class="col-lg-12">
+		<div class="col-xs-12">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
 					<h3 class="panel-title">
