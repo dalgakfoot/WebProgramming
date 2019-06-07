@@ -9,7 +9,8 @@
 =======
 	<li></li>
 	<li></li>
->>>>>>> parent of 717f6fd... push 추가
+>>>>>>> parent of 717f6fd... push 추�?
+	<li>push</li>
 </ul>
 
 </body>
