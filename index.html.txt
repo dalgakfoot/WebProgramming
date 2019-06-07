@@ -3,8 +3,13 @@
 <header>
 </header>
 <ul>
+<<<<<<< HEAD
 	<li>ÀúÀå¼Ò</li>
 	<li>¹öÀü</li>
+=======
+	<li></li>
+	<li></li>
+>>>>>>> parent of 717f6fd... push ì¶”ê°€
 </ul>
 
 </body>
